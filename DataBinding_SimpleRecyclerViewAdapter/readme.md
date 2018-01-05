@@ -16,5 +16,14 @@ recyclerView.setAdapter(SimpleAdapter.with(R.layout.items, list, new SimpleAdapt
 }));
 ```
 
+### In Kotlin
+
+```
+var simpleAdapter = SimpleAdapter.with(R.layout.item_home, list, SimpleAdapter.Binder<User, ItemHomeBinding> {
+            position: Int, model: User?, binding: ItemHomeBinding? ->
+            binding?.text?.setText("sdlfksdf")
+        })
+```
+
 Note: Don't change new instance of matches array list
 
